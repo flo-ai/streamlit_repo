@@ -14,6 +14,7 @@ streamlit.text('🥑🍞Avocado Toast')
 
 
 #add multiselect widget
+my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.multiselect("Pick some fruits:",list(my_fruit_list.index))
 
 streamlit.header('🍌🥭 Build your own fruit smoothie 🥝🍇')

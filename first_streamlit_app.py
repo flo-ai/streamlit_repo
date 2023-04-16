@@ -28,13 +28,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.header('🍌🥭 Build your own fruit smoothie 🥝🍇')
 streamlit.dataframe(fruits_to_show)
 
-#add text box
-streamlit.write("The use entered",fruit_choice)
-
-#normalize json data encapsulated in a try-except block
+#add text box, normalize json data ->  encapsulated in a try-except block
 streamlit.header("Fruityvice Fruit Advice")
 try:
-    fruit_choice = streamlit.text_input('What fruit would you like information about?', "kiwi")     
+    fruit_choice = streamlit.text_input('What fruit would you like information about?')     
     if not fruit_choice:
           streamlit.error("Please select a fruit to get information")
     else: 
